@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn {
+  background: none;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  width: 70px;
+  height: 35px;
+  font-family: sans-serif;
+  margin: 0 5px 0 5px;
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+.inputTweet {
+  outline: none;
+  outline: 1px solid lightgrey;
+  width: 400px;
+  height: 40px;
+  border-radius: 5px;
+}
+.shareButton {
+  background: none;
+  border: 1px solid lightgrey;
+  width: 90px;
+}
