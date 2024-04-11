@@ -1,6 +1,8 @@
 import "./App.css";
+import supabase from "./supabaseClient";
 
 function App() {
+  console.log(supabase);
   return (
     <div className="container">
       <header>
