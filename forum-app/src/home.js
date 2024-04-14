@@ -5,13 +5,19 @@ function Home({ token }) {
   const [tweet, setTweet] = useState("");
   const [fetchError, setFetchError] = useState(null);
   const [fetchTweetsData, setFetchTweetsData] = useState(null);
+
   function handleChange(e) {
     setTweet(e.target.value);
   }
   async function handleTweet() {
-    const { error } = await supabase
-      .from("Tweets")
-      .insert({ Tweet: tweet, name: token.user.email });
+    if (token && tweet.length > 10) {
+      const { error } = await supabase
+        .from("Tweets")
+        .insert({ Tweet: tweet, User_email: token.user.email });
+      window.location.reload();
+    } else {
+      alert("You have do login or put more words in your tweet :)!");
+    }
   }
 
   useEffect(() => {
