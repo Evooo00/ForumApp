@@ -29,7 +29,7 @@ function App() {
             element={
               <React.Fragment>
                 <Navbar token={token} />
-                <Home />
+                <Home token={token} />
               </React.Fragment>
             }
           />
